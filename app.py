@@ -1,4 +1,6 @@
-from flask import Flask, request
+from flask import Flask, request, Response
+import requests
+
 app = Flask(__name__)
 
 @app.route('/')
