@@ -6,7 +6,7 @@ def hello_world():
     return 'Hello, World!'
 
 # On the external server (e.g. Flask API):
-@app.route("/proxy_image", methods=['GET']))
+@app.route("/proxy_image", methods=['GET'])
 def proxy():
     image_url = request.args.get("url")
     img = requests.get(image_url).content
