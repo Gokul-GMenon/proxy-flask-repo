@@ -10,7 +10,7 @@ def hello_world():
 def proxy():
     image_url = request.args.get("url")
     img = requests.get(image_url).content
-    return Response(img, mimetype=img.headers.get("Content-Type", "image/png")
+    return Response(img, mimetype=img.headers.get("Content-Type", "image/png"))
 
 
 if __name__ == '__main__':
