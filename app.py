@@ -11,8 +11,9 @@ def hello_world():
 @app.route("/proxy_image", methods=['GET'])
 def proxy():
     image_url = request.args.get("url")
-    img = requests.get(image_url).content
-    return Response(img, mimetype=img.headers.get("Content-Type", "image/png"))
+    img_resp = requests.get(image_url)
+    img = img_resp.content
+    return Response(img, mimetype=img_resp.headers.get("Content-Type", "image/png"))
 
 
 if __name__ == '__main__':
